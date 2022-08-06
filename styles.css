@@ -58,7 +58,9 @@ Variables
 Global Styles
 ===============
 */
-
+html {
+  scroll-behavior: smooth;
+}
 *,
 ::after,
 ::before {
@@ -159,14 +161,38 @@ Navbar
 nav {
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
+  overflow: hidden;
+}
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: all 1s;
+}
+.home {
+  /* overflow: hidden; */
+}
+.nav-center {
+  /* height: 60px; */
 }
 .nav-header {
+  width: 13%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
 }
+.logo {
+  /* display: none; */
+  width: 100%;
+  border-radius: 5px;
+}
 .nav-toggle {
+  position: absolute;
+  right: 15px;
+  top: 15px;
   font-size: 1.5rem;
   color: var(--clr-primary-5);
   background: transparent;
@@ -178,9 +204,9 @@ nav {
   color: var(--clr-primary-1);
   transform: rotate(90deg);
 }
-.logo {
+/* .logo {
   height: 40px;
-}
+} */
 .links a {
   color: var(--clr-grey-3);
   font-size: 1rem;
@@ -198,18 +224,119 @@ nav {
 .social-icons {
   display: none;
 }
-.links {
+.linkWarper {
   height: 0;
   overflow: hidden;
-  /* background-color: aquamarine; */
   transition: var(--transition);
 }
-.show-links {
-  height: 10rem;
+
+/* todo...........................video CSS...................................... */
+
+body {
+  margin: 0;
 }
+header {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -2;
+  overflow: hidden;
+}
+.sec1 {
+  padding: 10%;
+  font-size: 300%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.sec1 h1 {
+  text-align: center;
+  color: white;
+}
+.sec1 p {
+  font-size: medium;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  content: "";
+  z-index: -1;
+}
+.btn-switch {
+  width: 90px;
+  position: absolute;
+  left: 100px;
+  bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(138, 138, 239);
+}
+.switch {
+  background-color: rgb(138, 138, 239);
+  width: 42px;
+  height: 22px;
+
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  transition: all 0.5s;
+}
+.slide {
+  transform: translate(110%);
+  /* background-color: grey; */
+  transition: all 0.5s;
+}
+
+/* todo ..........................DIFFERENT SECTION.............................. */
+
+section {
+  height: 60vh;
+  border-top: 1px dotted grey;
+  text-align: center;
+  background-color: tomato;
+}
+#contacts {
+  height: 60vh;
+  border-top: 1px dotted grey;
+  text-align: center;
+  background-color: rgb(1, 221, 221);
+}
+.top-link {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+}
+.show-top-link {
+  display: block;
+}
+footer {
+  text-align: center;
+}
+
 @media screen and (min-width: 800px) {
   .nav-center {
     max-width: 1170px;
+    height: auto;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -218,13 +345,21 @@ nav {
   }
   .nav-header {
     padding: 0;
+    width: 6%;
+  }
+  .logo {
+    display: block;
   }
   .nav-toggle {
     display: none;
   }
+  .linkWarper {
+    height: auto !important;
+  }
   .links {
-    height: auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .links a {

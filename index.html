@@ -9,6 +9,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
 
     <!-- styles -->
     <link rel="stylesheet" href="styles.css" />
@@ -17,27 +23,27 @@
     <nav>
       <div class="nav-center">
         <div class="nav-header">
-          <img src="logo.svg" alt="" /><button
-            class="nav-toggle"
-            id="toggleBtn"
-          >
+          <img src="logo.png" alt="" class="logo" />
+          <button class="nav-toggle" id="toggleBtn">
             <i class="fas fa-bars"></i>
           </button>
         </div>
-        <ul class="links">
-          <li>
-            <a href="index.html">home</a>
-          </li>
-          <li>
-            <a href="about.html">about</a>
-          </li>
-          <li>
-            <a href="projects.html">projects</a>
-          </li>
-          <li>
-            <a href="contact.html">contact</a>
-          </li>
-        </ul>
+        <div class="linkWarper">
+          <ul class="links">
+            <li>
+              <a href="#home" class="link">home</a>
+            </li>
+            <li>
+              <a href="#about" class="link">about</a>
+            </li>
+            <li>
+              <a href="#projects" class="link">projects</a>
+            </li>
+            <li>
+              <a href="#contacts" class="link">contacts</a>
+            </li>
+          </ul>
+        </div>
         <!-- social media -->
         <ul class="social-icons">
           <li>
@@ -68,6 +74,43 @@
         </ul>
       </div>
     </nav>
+
+    <header id="home">
+      <video class="video-container" muted autoplay loop>
+        <source src="./Nature Beautiful short video 720p HD.mp4" />
+      </video>
+      <div class="sec1">
+        <h1>Scroll project</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sint rem
+          ut! Soluta in distinctio nostrum, iure voluptatem optio ratione
+          sapiente deserunt, nisi aliquid culpa nemo similique blanditiis fuga?
+          Quos voluptates vero, sint aliquam saepe expedita, deserunt autem
+          architecto doloribus quasi iste voluptas atque. Est facere tempora
+          perferendis nulla ullam, aperiam, corrupti corporis ea, dignissimos
+          repellendus quibusdam.
+        </p>
+        <button type="button" class="btn btn-outline-info">
+          Explore Tours
+        </button>
+      </div>
+
+      <div class="overlay"></div>
+    </header>
+    <section id="about">About</section>
+    <section id="projects">Projects</section>
+    <div id="contacts">Contacts</div>
+
+    <footer>
+      Copyright &copy; TravelBea Travel Tour Company
+      <span id="date">....</span>. All Right Reserved
+    </footer>
+    <a href="#home" class="top-link"><i class="fas fa-arrow-up"></i></a>
     <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
